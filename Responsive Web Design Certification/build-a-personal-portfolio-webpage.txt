@@ -1,0 +1,398 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gawain Pek is a travel writer with experience in news writing and reporting.">
+    <title>Gawain Pek | Writer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div id="nav-logo">
+          <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1280px-Emoji_u1f4a9.svg.png">
+        </div>
+        <div id="nav-links">
+          <a href="#welcome-section">About</a>
+          <a href="#projects">Past Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+<!-- welcome section start -->
+      <section id="welcome-section">
+        <div id="welcome-text">
+          <h1 class="welcome-intro">Hey, Gawain here</h1>
+          <h2 class="welcome-sub-intro">Part-time Writer for Mothership, based in Singapore.</h2>
+        </div>
+      </section>
+<!-- welcome section end -->
+<!-- project section start -->
+      <section id="projects">
+        <div id="projects-header">
+          <h3>Here are some of my writing works</h3>
+        </div>
+        <div id="projects-examples">
+          <div class="project-tile">
+            <img class="org-pic" src="https://static.mothership.sg/1/2021/05/1.Social-media-profile-picture.jpg" alt="mothership logo">
+            <h4 class="org-link"><a href="https://mothership.sg/" target="_blank">Mothership.sg</a></h4>
+          </div>
+          <div class="project-tile">
+            <img class="org-pic" src="https://www.responsiblebusiness.com/wp-content/uploads/2017/04/responsiblebusiness.jpg" alt="responsible business logo">
+            <h4 class="org-link"><a href="" target="_blank">Responsible Business</a></h4>
+          </div>
+          <div class="project-tile">
+            <img class="org-pic" src="https://scontent.fsin14-1.fna.fbcdn.net/v/t39.30808-6/241374091_4616067395123092_7215734903890074483_n.png?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=K7TjpOPCjUEAX8kxU93&_nc_ht=scontent.fsin14-1.fna&oh=00_AfAxn-EnOJaqzakJDKtsRUaOn0RUEysJtCL2n96FZGTUmA&oe=64F4F2A6" alt="trip101 logo">
+            <h4 class="org-link"><a href="" target="_blank">Trip101</a></h4>
+          </div>
+          <div class="project-tile">
+            <img class="org-pic" src="https://scontent.fsin14-2.fna.fbcdn.net/v/t39.30808-6/326742305_518665693581073_5263648176368752293_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=Bxk_GvKez-UAX--DMVq&_nc_ht=scontent.fsin14-2.fna&oh=00_AfDwYlfq-HpRrgkAm0XGbcI18gWjcJKzRH9Dj5Iv_GVaxw&oe=64F555B4" alt="GCI logo">
+            <h4 class="org-link"><a href="" target="_blank">Global Climbing Initiative</a></h4>
+          </div>
+        </div>
+        <div id="projects-more">
+          <button id="show-more" type="button">Show More</button>
+        </div>
+      </section>
+<!-- project section end -->
+<!-- contacts section start -->
+      <section id="contact">
+        <div id="contact-header">
+          <h3>Let's connect!</h3>
+          <p>And work together.</p>
+        </div>
+        <div class="contact-socials">
+        <div class="contact-links">
+          <a class="profile-link" href="" target="_blank"><i class="fab fa-linkedin icon"></i><p>LinkedIn</p></a>
+        </div>
+        <div class="contact-links">
+          <a class="profile-link" href="" target="_blank"><i class="fab fa-facebook icon"></i><p>Facebook</p></a>
+        </div>
+        <div class="contact-links">
+          <a class="profile-link" href="" target="_blank"><i class="fab fa-instagram icon"></i><p>Instagram</p></a>
+        </div>
+        <div class="contact-links">
+          <a id="profile-link" href="" target="_blank"><i class="fab fa-github icon"></i><p>Github</p></a>
+        </div>
+        </div>
+      </section>
+<!-- contacts section end -->
+    </main>
+<!-- footer start -->
+    <footer>
+      <p>&copy Gawain's Mock Portfolio</p>
+    </footer>
+<!-- footer end -->
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --colour1:#1C3041;
+  --colour2:#fdfffc;
+  --colour3:#2ec4b6;
+  --colour4:#e71d36;
+  --colour5:#ff9f1c;
+}
+
+html{
+  font-family:Lato, Arial;
+  font-size:10px;
+  font-weight:400;
+  background-color:var(--colour2);
+}
+
+body{
+  position:relative;
+}
+
+/*navbar css start*/
+
+header{
+  position:fixed;
+  width:100vw;
+  box-shadow:0px 1px 8px black;
+  z-index:1;
+}
+
+#navbar{
+  overflow:hidden;
+  background-color:var(--colour5);
+}
+
+#nav-logo{
+  float:left;
+  margin:10px;
+  margin-bottom:0px;
+}
+
+.logo{
+  width:50px;
+  height:auto;
+  object-fit:fill;
+}
+
+#nav-links{
+  float:right;
+}
+
+#navbar a{
+  text-decoration:none;
+  color:var(--colour2);
+  float:left;
+  padding:20px;
+  text-align:center;
+  transition:0.3s;
+  font-size:2.2rem;
+}
+
+#navbar a:hover{
+  text-decoration:none;
+  background-color:var(--colour4);
+}
+
+.nav-link{
+  display:inline-block;
+  height:100%;
+  width:15%;
+  text-align:center;
+}
+
+/*navbar end*/
+/*welcome start*/
+
+#welcome-section{
+  height:100vh;
+  width:auto;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--colour2);
+  background:linear-gradient(20deg, #335776 30%, var(--colour1));
+}
+
+.welcome-intro{
+  font-size:4rem;
+  font-weight:900;
+}
+
+.welcome-sub-intro{
+  font-weight:100;
+  font-size:3.4rem;
+}
+
+/*welcome end*/
+/*projects start*/
+
+#projects{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:var(--colour3);
+}
+
+#projects-header h3{
+  font-size:3.5rem;
+  margin-top:20px;
+  margin-bottom:20px;
+  text-decoration:underline;
+  color:var(--colour2);
+}
+
+#projects-examples{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  width:100vw;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.project-tile{
+  height:350px;
+  width:350px;
+  margin:20px;
+  background:var(--colour1);
+  border-radius:10px;
+  text-align:center;
+}
+
+.org-pic{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+}
+
+.org-link{
+  padding-top:10px;
+}
+
+.project-tile a{
+  text-decoration:none;
+  color:var(--colour2);
+  font-size:1.8rem;
+  position:relative;
+}
+
+.project-tile a::before{
+  content:"< ";
+  left:-15px;
+}
+
+.project-tile a::after{
+  content:" />";
+  right:-22px;
+}
+
+.project-tile a::before, .project-tile a::after{
+  font-size:1.8rem;
+  color:var(--colour4);
+  position:absolute;
+  top:-5px;
+  opacity:0;
+  transition:0.4s;
+}
+
+.project-tile a:hover::before, .project-tile a:hover::after{
+  opacity:100;
+  top:2px;
+}
+
+#show-more{
+  font-family:lato, arial;
+  font-size:1.8rem;
+  width:150px;
+  height:50px;
+  margin-bottom:20px;
+  border-radius:5px;
+  border:none;
+  background-color:var(--colour1);
+  color:var(--colour2);
+  transition:0.4s;
+}
+
+#show-more:hover{
+  background-color:var(--colour4);
+  cursor:pointer;
+}
+
+/*projects end*/
+/*contacts start*/
+
+#contact{
+  height:100vh;
+  width:auto;
+  background:linear-gradient(20deg, #335776 30%, var(--colour1));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+#contact-header h3{
+  font-size:4rem;
+  color:var(--colour2);
+}
+
+#contact-header p{
+  font-size:3.4rem;
+  font-weight:100;
+  color:var(--colour2);
+}
+
+#contact-header{
+  margin-bottom:40px;
+}
+
+.profile-link{
+  text-decoration:none;
+}
+
+.contact-links p,.contact-links i{
+  font-size:2.6rem;
+  display:inline-block;
+  margin-left:5px;
+  color:var(--colour2);
+  text-shadow:0px 2px 4px black;
+}
+
+.contact-links{
+  margin:0px 15px;
+}
+
+.contact-links a{
+  position:relative;
+  top:0px;
+  transition:0.3s;
+}
+
+.contact-links a:hover{
+  top:8px;
+}
+
+.contact-socials{
+  display:flex;
+  flex-direction:row;
+}
+
+/*contacts end*/
+/*footer start*/
+
+footer{
+  width:100%;
+  height:5%;
+  padding-top:10px;
+  border-top:solid 3px var(--colour4);
+  background:linear-gradient(20deg, #335776 30%, var(--colour1));
+}
+
+footer p{
+  text-align:center;
+  font-size:1.8rem;
+  color:var(--colour2);
+}
+
+/*footer end*/
+
+@media (max-width:800px) {
+  .welcome-intro{
+    font-size:3.4rem;
+  }
+
+  .welcome-sub-intro{
+    font-size:2.8rem;
+  }
+
+  #projects-header h3{
+    font-size:2.8rem;
+  }
+
+  .contact-socials{
+    flex-direction:column;
+  }
+
+  .contact-links{
+    margin:15px 0px;
+  }
+}
+
+** end of undefined **
+

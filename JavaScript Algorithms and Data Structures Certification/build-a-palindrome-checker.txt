@@ -1,0 +1,164 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf=8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <meta name="description" content="Palindrome Checker">
+    <link rel="stylesheet" href="styles.css">
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <div id="logo-box"><img src="https://d33wubrfki0l68.cloudfront.net/52edd2dfddbec5db22a65dba39951af8fa9bdff6/006f7/img/fcc_primary_large.svg" width="300px"></div>
+    <div id="title-box">
+      <h1 id="main-title">Is it a palindrome?</h1>
+    </div>
+    <div id="check-box">
+      <label for="text-input" name="input-label" id="input-label"><span class="prompt">Enter in text to check for a palindrome:</span></label><br>
+      <div id="input-box">
+        <input type="text" id="text-input" name="text-input" />
+        <button type="button" id="check-btn">Check</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <div id="explain-box">
+      <span> A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</span>
+    </div>
+  </body>
+<script src="./script.js"></script>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding:0;
+}
+
+:root{
+  --col1: #0A0A23;
+  --col2: #5A01A7;
+  --col3:#FFFFFF;
+  -col4:#00481B;
+}
+
+html{
+  font-family:Lato, Arial;
+  font-size: 10px;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin: 0 auto;
+  background-color:var(--col1);
+  padding-top:30vh;
+}
+
+img{
+  margin-bottom:30px;
+}
+
+#main-title{
+  color:var(--col3);
+  font-size:50px;
+  margin-bottom:30px;
+}
+
+#check-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+#check-box, #explain-box{
+  width:500px;
+  height:auto;
+  border-radius:10px;
+  padding: 30px 0;
+  background-color: var(--col3);
+}
+
+#explain-box{
+  text-align:center;
+  font-size:20px;
+}
+
+#input-box{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+#input-label{
+  font-size:20px;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+#text-input{
+  width:280px;
+  height:40px;
+  text-align:center;
+  border:none;
+  border-bottom: 3px solid var(--col2);
+  font-size:18px;
+}
+
+#check-btn{
+  font-size:16px;
+  margin-left:15px;
+  height:40px;
+  width:100px;
+  background-color:var(--col2);
+  border-radius:20px;
+  border:none;
+  color:var(--col3);
+}
+
+#result{
+  font-size:30px;
+}
+
+
+** end of undefined **
+
+** start of undefined **
+
+const textInput = document.getElementById("text-input");
+const checkButton = document.getElementById("check-btn");
+const yesOrNo = document.getElementById("result");
+
+const palindrome = () => {
+  
+  const textToCheck=textInput.value;
+  const palindromeYes = `<strong>${textToCheck}</strong> is a palindrome`
+  const palindromeNo = `<strong>${textToCheck}</strong> is not a palindrome`
+
+  if (textToCheck.length === 0){
+    alert("Please input a value");
+    return;
+  }
+
+  const regex = /[\W_]/g;
+  const cleanedString = textToCheck.toLowerCase().replace(regex, "")
+  const len = cleanedString.length;
+  for (let i=0; i < len/2; i++) {
+    if (cleanedString[i] !== cleanedString[len-i-1]){
+      return yesOrNo.innerHTML = palindromeNo
+    }
+  } return yesOrNo.innerHTML = palindromeYes;
+}
+
+checkButton.addEventListener("click", palindrome);
+
+** end of undefined **
+

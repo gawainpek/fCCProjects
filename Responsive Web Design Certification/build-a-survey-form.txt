@@ -1,0 +1,146 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <title>Survery Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <!-- Header with title & description -->
+    <header>
+      <h1 id="title">Survey form</h1>
+      <p id="description">Please provide your feedback for the event.</p>
+    </header>
+  <!-- Beginning of form -->
+    <main>
+      <form action="https://freeCodeCamp.org" method="post" id="survey-form">
+      <!-- First fieldset for name, email & number -->
+        <fieldset>
+          <label id="name-label" for="name">Name: <input type="text" required id="name" placeholder=" Enter your full name"/></label>
+          <label id="email-label" for="email">Email Address: <input type="email" required id="email" placeholder=" Enter your email address"/></label>
+          <label id="number-label" for="number">Group Number: <input type="number" required min="1" max="8" id="number" placeholder=" Enter your group number"/></label>
+        </fieldset>
+      <!-- Second fieldset for dropdwon & radio -->
+        <fieldset>
+          <label for="dropdown">How did you hear about the event? 
+            <select id="dropdown">
+              <option value="">(Select one)</option>
+              <option value"1">Friends</option>
+              <option value"2">Internet</option>
+              <option value"3">TV</option>
+              <option value"4">Email Newsletter</option>
+            </select>
+           </label>
+          <label><input type="radio" name="future-attend" value="attending" checked> I will attend again.</label>
+          <label><input type="radio" name="future-attend" value="not-attending"> I will not attend again. 
+          </label>
+        </fieldset>
+      <!-- Third fieldset for checkboxes-->
+        <fieldset>
+          <h3>What did you like about the event?</h3>
+        <label for="food-liked"><input type="checkbox" id="food-liked" name="liked-what" value="food"> Food</label>
+        <label for="music-liked"><input type="checkbox" id="music-liked" name="liked-what" value="music"> Music</label>
+        <label for="games-liked"><input type="checkbox" id="games-liked" name="liked-what" value="games"> Games</label>
+        <label for="venue-liked"><input type="checkbox" id="venue-liked" name="liked-what" value="venue"> Venue</label>
+        </fieldset>
+      <!-- Fourth fieldset for textarea -->
+        <fieldset>
+          <label for="feedback">Other feedback: <textarea rows="3" columns="30" id="feedback" placeholder="Max. words: 200"></textarea></label>
+        </fieldset>
+      <!-- Submit button -->
+        <input type="submit" id="submit">
+      </form>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  background-color:#7f4f24;
+  color:#f6f6f6;
+  font-family:Verdana;
+  font-size:16px;
+  width:100%;
+  height:100vh;
+}
+
+h1,p{
+  text-align:center;
+  margin:0 auto;
+}
+
+h3{
+  font-size:16px;
+  font-weight:normal;
+}
+
+p{
+  margin-top:5px;
+  font-style:italic;
+}
+
+form{
+  margin:0 auto;
+  max-width:500px;
+  min-width:300px;
+  width:80vw;
+}
+
+fieldset{
+  border:none;
+  border-bottom:solid 2px #582f0e;
+}
+
+label{
+  display:block;
+  margin:20px auto;
+}
+
+input{
+  height:2em;
+  width:100%;
+  margin-top:5px;
+  background-color:#936639;
+  border:none;
+  border-radius:3px;
+}
+
+::placeholder{
+  color:#a68a64;
+}
+
+textarea{
+  margin-top:5px;
+  background-color:#936639;
+  width:100%;
+}
+
+select{
+  margin-top:5px;
+  width:100%;
+  height:2em;
+}
+
+input[type="radio"], input[type="checkbox"]{
+  height: 1em;
+  width: 1em;
+}
+
+fieldset:last-of-type{
+  border:none;
+}
+
+input[type="submit"]{
+  margin:0 auto;
+  width:50%;
+  display:block;
+}
+
+** end of undefined **
+

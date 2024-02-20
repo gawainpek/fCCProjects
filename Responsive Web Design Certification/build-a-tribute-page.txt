@@ -1,0 +1,135 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Einstein tribute</title>
+  </head>
+  <main id="main">
+    <header>
+      <h1 id="title">A Brief Tribute to Einstein</h1>
+    </header>
+    <body>
+      <div id="img-div">
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Albert_einstein.jpg" alt="Einstein in front of a chalkboard">
+        <figcaption id="img-caption">Albert Einstein, the greatest physicist of the late 20th Century.</figcaption>
+      </div>
+      <div id="tribute-info">
+        <h2>Here are some key facts about Einstein:</h2>
+        <ul id="info-list">
+          <li>He was born March 14, 1879.</li>
+          <li>He was German, born in the town of Ulm.</li>
+          <li>He formulated and proved the theory of relativity.</li>
+          <li>He is best known for his equation, e=mc<sup>2</sup>.</li>
+        </ul>
+      </div>
+    </body>
+    <footer>
+      <h3>To read more about Albert Einstein, visit <a id="tribute-link" href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" rel="noreferral noopener">here</a>.
+  </main>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-size:16px;
+}
+
+main{
+  font-family:Trebuchet MS;
+  background-color:#43AA8B;
+}
+
+h1{
+  text-align:center;
+  font-size:2rem;
+  padding-top:12px;
+  color:#F6F8FF;
+  margin:0 auto;
+  width:50%;
+}
+
+header{
+  background-color:#254441;
+  height:60px;
+  margin-bottom:10px;
+}
+
+#img-div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-bottom:10px;
+}
+
+#image{
+  display:block;
+  align-self:center;
+  margin-bottom:5px;
+  max-width:100%;
+  height:auto;
+}
+
+#img-caption{
+  text-align:center;
+}
+
+#tribute-info{
+  margin-bottom:10px;
+  background-color:#254441;
+  padding:10px;
+  color:#F6F8FF;
+}
+
+#tribute-info>h2{
+  margin:0 auto;
+  margin-bottom:10px;
+  width:50%;
+  font-size:1.4rem;
+}
+
+#info-list{
+  margin:0 auto;
+  width:50%;
+}
+
+sup{
+  font-size:0.7rem;
+}
+
+li{
+  padding:2px;
+  font-size:1.1rem;
+}
+
+footer{
+  margin:0 auto;
+  width:50%;
+}
+
+h3{
+  color:#F6F8FF;
+}
+
+h3>a:link{
+  color:#D4AA7D;
+  text-decoration:none;
+}
+
+h3>a:hover{
+  color:#EFD09E;
+  text-decoration:none;
+}
+
+
+
+** end of undefined **
+

@@ -1,0 +1,376 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <title>drugstore.co</title>
+  </head>
+  <body>
+    <!-- header section start -->
+    <header id="header">
+      <img src="https://pbs.twimg.com/media/EQ7jhStX0AAI8Au.jpg" alt="orange pill bottle pixel art" id="header-img" >
+      <nav id="nav-bar">
+        <ul>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#video" class="nav-link">What We Do</a></li>
+        <li><a href="#plans" class="nav-link">Plans</a></li>
+        <li><a href="#sign-up" class="nav-link">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header section end -->
+    <main>
+      <section id="welcome">
+        <h1>Welcome to the Drugstore</h1>
+      </section>
+      <!-- features section start -->
+      <section id="features">
+        <div class="icon">
+          <i class="fab fas fa-crosshairs"></i>
+        </div>
+        <div class="features-info">
+          <h4 class="features-title">Carefully curated</h4>
+          <p>Our vintage clothes are lovingly sourced from around the world to ensure not just quality, but also style.</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-dolly-flatbed"></i>
+        </div>
+        <div class="features-info">
+          <h4 class="features-title">Right to your doorstep</h4>
+          <p>We offer free tracked shipping for all purchases, making sure your vintage pieces reach you with no hiccups.</p>
+        </div>
+        <div class="icon">
+          <i class="fas fa-user-secret"></i>
+        </div>
+        <div class="features-info">
+          <h4 class="features-title">Whatever you want</h4>
+          <p>Have a piece you really want but can't find it? Let us know, and we'll source it — just for you.</p>
+        </div>
+      </section>
+      <!-- features section end -->
+      <!-- video section start -->
+      <section id="video-box">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/XDqcrpgE-Ig?si=hBayxIVPrYt9cK6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </section>
+      <!-- video section end -->
+      <!-- plans section start -->
+      <section id="plans">
+        <div class="plan-box">
+          <div class="plan-name">
+            <h4>Fresh</h4>
+          </div>
+          <div class="plan-details">
+            <p class="price">$50/mth</p>
+            <p>First dibs</p>
+            <p>Curated suggestions</p>
+            <button class="select-plan">Select</button>
+          </div>
+        </div>
+        <div class="plan-box">
+          <div class="plan-name">
+            <h4>Addict</h4>
+          </div>
+          <div class="plan-details">
+            <p class="price">$100/mth</p>
+            <p>First dibs</p>
+            <p>Curated suggestions</p>
+            <p>Sourcing requests</p>
+            <button class="select-plan">Select</button>
+          </div>
+        </div>
+        <div class="plan-box">
+          <div class="plan-name">
+            <h4>Dealer</h4>
+          </div>
+          <div class="plan-details">
+            <p class="price">$150/mth</p>
+            <p>First dibs</p>
+            <p>Curated suggestions</p>
+            <p>Sourcing requests</p>
+            <p>Monthly surprise</p>
+            <button class="select-plan">Select</button>
+          </div>
+        </div>
+      </section>
+      <!-- plans section end -->
+      <!-- sign-up section start -->
+      <section id="sign-up">
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+          <label for="email">Catch our drops</label>
+          <input type="email" id="email" name="email" placeholder=" Enter your email">
+          <input id="submit" type="submit" value="Submit">
+        </form>
+      </section>
+    </main>
+  </body>
+  <footer>
+  </footer>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+:root{
+  --bg-color0:red;
+  --bg-color00:pink;
+  --bg-color1:#77d6c2;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  font-family:Kanit,Arial;
+  font-size:10px;
+  background: var(--bg-color1)
+}
+
+
+/*header start*/
+#header{
+  position:sticky;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:100px;
+  z-index:1;
+  margin-bottom:3rem;
+  background: var(--bg-color1);
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+}
+
+#header-img{
+  width:150px;
+  height:100px;
+  object-fit:contain;
+}
+
+#nav-bar{
+  width:auto;
+  display:flex;
+  justify-content:flex-end;
+}
+
+ul{
+  list-style:none;
+}
+
+li{
+  display:inline-block;
+}
+
+a:link{
+  text-decoration:none;
+  color:black;
+  transition-duration:0.5s;
+}
+
+a:hover{
+  text-decoration:none;
+  color:darkorange;
+}
+
+.nav-link{
+  font-size:2rem;
+  margin-right:2rem;
+  padding:10px;
+}
+
+/*header end*/
+
+
+/*welcome start*/
+
+#welcome{
+  margin-bottom:3rem;
+  text-align:center;
+}
+
+h1{
+  font-size:3rem;
+}
+
+/*welcome end*/
+/*features start*/
+
+#features{
+  background:var(--bg-color1);
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:repeat(3, 1fr);
+  row-gap:2rem;
+  column-gap:1.5rem;
+  margin-bottom:3rem;
+}
+
+.features-title{
+  font-size:2.2rem;
+  font-weight:1000;
+}
+
+#features p{
+  font-size:1.6rem;
+}
+
+.features-info{
+  grid-column: 3/6;
+}
+
+.icon{
+  font-size:3.5rem;
+  text-align:right;
+  padding: 10 20 10 10;
+  color:#ff8000;
+  grid-column: 2 / 3;
+}
+
+/*features end*/
+/*video start*/
+#video{
+  display:block;
+  margin:0 auto;
+  border:transparent;
+}
+
+#video-box{
+  margin-bottom:3rem;
+  border:transparent;
+}
+
+/*plans start*/
+#plans{
+  display:flex;
+  justify-content:center;
+  margin-bottom:3rem;
+}
+
+.plan-box{
+  height:auto;
+  width:250px;
+  border:1.5px solid black;
+  margin:0 20px 0 0;
+  border-radius:4px;
+}
+
+.plan-name h4{
+  font-size:3rem;
+  text-align:center;
+  background:#2f9d85;
+  color:white;
+}
+
+.plan-details{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  grid-template-rows:repeat(7,1fr);
+  justify-items:center;
+}
+
+.price{
+  font-size:2.2rem;
+  margin-top:5px;
+  margin-bottom:5px;
+
+}
+
+.plan-details{
+  font-size:1.6rem;
+}
+
+.select-plan{
+  width:70%;
+  height:30px;
+  font-family:Kanit, Arial;
+  grid-row:7/8;
+  font-size:1.5rem;
+  border-radius:5px;
+  border:transparent;
+  transition-duration:0.5s;
+  margin-bottom:10px;
+}
+
+#submit:hover, .select-plan:hover{
+  background-color:#ff8000;
+  color:white;
+  cursor:pointer;
+}
+
+/*plans end*/
+#sign-up{
+  margin:0 auto;
+  height:auto;
+  margin-bottom:3rem;
+}
+
+label{
+  display:block;
+  font-size:3rem;
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+
+#email{
+  margin:0 auto;
+  height:4rem;
+  max-width:300px;
+  min-width:200px;
+  width:250px;
+  display:block;
+  margin-bottom:1.5rem;
+  border:1px solid black;
+  border-radius:5px;
+}
+
+#email::placeholder{
+  font-family:Kanit,Arial;
+  color:grey;
+  text-align:center;
+}
+
+#submit{
+  display:block;
+  margin:0 auto;
+  max-width:300px;
+  min-width:200px;
+  width:250px;
+  height:30px;
+  margin-bottom:1.5rem;
+  border:transparent;
+  border-radius:5px;
+  font-family:Kanit,Arial;
+  font-size:1.5rem;
+  transition-duration:0.5s;
+}
+
+@media (max-width:800px){
+  #plans{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .plan-box{
+    margin:0 0 20px 0;
+    width:400px;
+  }
+
+  .nav-link{
+    font-size:1.8rem;
+  }
+}
+
+** end of undefined **
+

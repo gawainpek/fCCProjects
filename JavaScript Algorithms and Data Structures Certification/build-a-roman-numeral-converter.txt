@@ -1,0 +1,219 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+  </head>
+  <body>
+    <div id="page-title">
+      <h1>Roman Numeral Converter</h1>
+    </div>
+    <div id="converter-box">
+      <label for="input" id="input-label">Enter a Number:</label>
+      <input type="number" id="number" name="input"></input>
+      <button id="convert-btn" type="button">Convert</button>
+    </div>
+    <div id="output" class="hide"></div>
+  </body>
+  <script src="./script.js"></script>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  box-sizing:border-box;
+}
+
+:root{
+  --col1:#d32929;
+  --col2:#facd1e;
+  --col3:#fff5e6;
+  --col4:#e5dbb7;
+  --col5:#cac198;
+  --col6:#7f2122;
+}
+
+html{
+  margin:auto;
+  padding:0;
+  font-family:Lato, Arial;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:linear-gradient(var(--col1), var(--col2));
+}
+
+#page-title{
+  margin-top:15vh;
+  height:auto;
+  margin-bottom:20px;
+  width:500px;
+}
+
+#page-title h1{
+  text-align:center;
+  color:var(--col3);
+}
+
+#page-title, #converter-box, #output{
+  background:var(--col6);
+  border:outset 5px;
+}
+
+#converter-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+  height:auto;
+  padding:20px;
+  margin-bottom:20px;
+  width:400px;
+}
+
+#input-label{
+  font-size:1.6rem;
+  font-weight:bold;
+  color:var(--col3);
+  margin-bottom:10px;
+}
+
+#number{
+  width:300px;
+  height:50px;
+  margin-bottom:20px;
+  font-size:2rem
+}
+
+#convert-btn{
+  width:300px;
+  height:50px;
+  font-size:1.5rem;
+  font-weight:bold;
+  background:var(--col6);
+  color:var(--col2);
+  border-radius:6px;
+  border:outset 3px var(--col2);
+  transition: 0.2s ease-in-out;
+}
+
+#convert-btn:hover{
+  background:var(--col3);
+  color:var(--col6);
+  border:none;
+}
+
+#output{
+  text-align:center;
+  color:var(--col3);
+  font-weight:bold;
+  font-size:1.6rem;
+  width:400px;
+  padding: 20px;
+}
+
+.hide{
+  display:none;
+}
+
+** end of undefined **
+
+** start of undefined **
+
+const number = document.getElementById("number")
+const convertBtn = document.getElementById("convert-btn")
+const output = document.getElementById("output")
+
+
+ const numerals = [
+   {
+     arabic: 1,
+     roman: "I"
+   },
+   {
+     arabic: 4,
+     roman: "IV"
+   },
+   {
+     arabic: 5,
+     roman: "V"
+   },
+   {
+     arabic: 9,
+     roman: "IX"
+   },      
+   {
+     arabic: 10,
+     roman: "X"
+   },
+   {
+     arabic: 40,
+     roman: "XL"
+   },
+    {
+     arabic: 50,
+     roman: "L"
+   },
+   {
+     arabic: 90,
+     roman: "XC"
+   },
+   {
+     arabic: 100,
+     roman: "C"
+   },
+   {
+     arabic: 400,
+     roman: "CD"
+   },
+   {
+     arabic: 500,
+     roman: "D"
+   },
+   {
+     arabic: 900,
+     roman: "CM"
+   },     
+   {
+     arabic: 1000,
+     roman: "M"
+   }              
+ ];
+
+const romanIndex = numerals.reverse();
+
+const converter = () =>{
+  let convertThis = number.value;
+  output.classList.remove("hide");
+  if (convertThis.length === 0){
+    output.innerText="Please enter a valid number";
+  } else if (convertThis > 3999){
+    output.innerText="Please enter a number less than or equal to 3999";
+  } else if (convertThis <= 0){
+    output.innerText="Please enter a number greater than or equal to 1";
+  }  else {
+    let convertedRoman = "";
+    romanIndex.forEach(({arabic, roman}) => {
+      while (arabic <= convertThis){
+        convertedRoman += roman;
+        convertThis -= arabic;
+      }
+    })
+    output.innerText=`${convertedRoman}`;
+  }
+}
+
+convertBtn.addEventListener("click",converter);
+
+
+** end of undefined **
+
